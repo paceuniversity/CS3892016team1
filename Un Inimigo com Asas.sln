@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{F345C42C-6D2D-C894-86F1-78762667C041}") = "Un Inimigo com Asas", "Assembly-CSharp-firstpass.csproj", "{5641C203-4177-AC60-6302-D20B486C6C06}"
+EndProject
+Project("{F345C42C-6D2D-C894-86F1-78762667C041}") = "Un Inimigo com Asas", "Assembly-CSharp.csproj", "{E9DFAFD0-49FC-E974-7D66-B0A8C8794FCD}"
+EndProject
+Project("{F345C42C-6D2D-C894-86F1-78762667C041}") = "Un Inimigo com Asas", "Assembly-CSharp-Editor.csproj", "{ED9FD14B-D378-FEE5-AEAE-271C14E62CFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5641C203-4177-AC60-6302-D20B486C6C06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5641C203-4177-AC60-6302-D20B486C6C06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5641C203-4177-AC60-6302-D20B486C6C06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5641C203-4177-AC60-6302-D20B486C6C06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9DFAFD0-49FC-E974-7D66-B0A8C8794FCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9DFAFD0-49FC-E974-7D66-B0A8C8794FCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9DFAFD0-49FC-E974-7D66-B0A8C8794FCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9DFAFD0-49FC-E974-7D66-B0A8C8794FCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED9FD14B-D378-FEE5-AEAE-271C14E62CFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED9FD14B-D378-FEE5-AEAE-271C14E62CFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED9FD14B-D378-FEE5-AEAE-271C14E62CFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED9FD14B-D378-FEE5-AEAE-271C14E62CFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
