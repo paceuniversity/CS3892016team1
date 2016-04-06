@@ -6,9 +6,6 @@ public class EnemyHealth : MonoBehaviour {
 	public int health = 1;
 	public int damage = 1;
 
-	// Do we need this? Consideration in case someone taps on the house
-	public bool isEnemy = true;
-
 	public void takeDamage(int damageVal)
 	{
 		health -= damageVal;
