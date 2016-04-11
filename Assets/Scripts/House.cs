@@ -12,7 +12,7 @@ public class House : MonoBehaviour {
 		if (health <= 0) {
 			//Destroys the gameObject the script is attached to, in this case the house
 			Destroy (gameObject);
-			Application.LoadLevel("GameOver");
+            Application.LoadLevel("GameOver");
 		}
 	}
 
