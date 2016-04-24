@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour {
-
+   
 	private int health = 1;
 	private int damage = 1;
     GameObject currentMosquito;
@@ -41,7 +42,8 @@ public class EnemyHealth : MonoBehaviour {
 				rayHit.transform.gameObject.GetComponent<EnemyHealth>().takeDamage(1);
 
 				if (health <= 0) {
-					// Destroys the gameObject the script is attached to, in this case the mosquito
+                    // Destroys the gameObject the script is attached to, in this case the mosquito
+                    Score.SCORE++;
 					Destroy (currentMosquito);
 				}
 			}

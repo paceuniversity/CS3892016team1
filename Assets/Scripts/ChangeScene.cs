@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class ChangeScene : MonoBehaviour {
 
 
     public void LoadScene(string name)
@@ -10,5 +10,5 @@ public class NewBehaviourScript : MonoBehaviour {
         SceneManager.LoadScene(name);
     }
 
-   
+
 }

@@ -9,6 +9,9 @@ public class ConfigScript : MonoBehaviour {
     public Text title;
     public Text sound;
     public Text lang;
+    public Text buttonHelp;
+    public Text buttonSettings;
+    public Text buttonAbout;
     public string language = "En";
     public string Langkey = "lang";
     //ChangeLanguage changeLanguage;
@@ -19,6 +22,8 @@ public class ConfigScript : MonoBehaviour {
         {
             PlayerPrefs.SetString(Langkey, language);
         }
+        ChangeButtons();
+        updateSettings();
     }
 	public void Settings()
     {
@@ -60,21 +65,39 @@ public class ConfigScript : MonoBehaviour {
             title.text = choosen_En.text;
     }
 
-    void updateSettings()
+    public void updateSettings()
     {
         if (PlayerPrefs.GetString(Langkey).Equals("En"))
         {
             lang.text = "Language";
             sound.text = "Sound";
+            title.text = "Settings";
         }
         if (PlayerPrefs.GetString(Langkey).Equals("Pt"))
         {
             lang.text = "idioma";
             sound.text = "som";
+            title.text = "Config";
+        }
+    }
+
+    public void ChangeButtons()
+    {
+        if (PlayerPrefs.GetString(Langkey).Equals("En"))
+        {
+            buttonAbout.text = "About";
+            buttonHelp.text = "Help";
+            buttonSettings.text = "Settings";
+        }
+        if (PlayerPrefs.GetString(Langkey).Equals("Pt"))
+        {
+            buttonAbout.text = "Sobre";
+            buttonHelp.text = "Ajuda";
+            buttonSettings.text = "Config";
         }
     }
     // Update is called once per frame
     void Update () {
-        updateSettings();
+        
     }
 }
