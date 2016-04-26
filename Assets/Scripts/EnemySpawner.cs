@@ -18,6 +18,13 @@ public class EnemySpawner : MonoBehaviour {
 
 	void Spawn() {
 
+		//Generate random X and Y coordinates according to our spawn object's scale
+		float spawnX = Random.Range (transform.position.x - transform.localScale.x * 5, transform.position.x + transform.localScale.x * 5);
+		float spawnY = Random.Range (transform.position.y - transform.localScale.y * 5, transform.position.y + transform.localScale.y * 5);
+
+		//Create a new spawning position for every spawn
+		Vector2 spawnPos = new Vector2 (spawnX, spawnY);
+
 		// Randomized spawn delay from 1 to 5 seconds
 		float spawnDelay = Random.Range(1, 5);
 
@@ -25,7 +32,7 @@ public class EnemySpawner : MonoBehaviour {
 		int enemyIndex = Random.Range (0, enemyArray.Length);
 
 		// Create our enemies put into the array
-		Instantiate (enemyArray [enemyIndex], transform.position, transform.rotation);
+		Instantiate (enemyArray [enemyIndex], spawnPos, transform.rotation);
 		// Call the spawn method to continue spawning
 		Invoke ("Spawn", spawnDelay);
 	}
