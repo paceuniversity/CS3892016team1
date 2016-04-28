@@ -29,7 +29,20 @@ public class EnemyMovement : MonoBehaviour {
                 transform.rotation = Quaternion.AngleAxis((angle - 90), Vector3.forward);
 
             }
-            else {
+        else if (Time.timeScale == 0)
+        {
+            // Move mosquito towards the House's point at 0,0
+            transform.position = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y), targetPos, 0);
+
+            // Rotate the sprite's image to face the house
+            Vector3 houseDir = rotatePos - transform.position;
+            float angle = Mathf.Atan2(houseDir.y, houseDir.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis((angle - 90), Vector3.forward);
+
+        }
+
+        else
+        {
                 // Move mosquito towards the House's point at 0,0
                 transform.position = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y), targetPos, Time.fixedDeltaTime * speed);
 
