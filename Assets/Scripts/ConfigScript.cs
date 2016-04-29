@@ -13,12 +13,13 @@ public class ConfigScript : MonoBehaviour {
     public Text buttonSettings;
     public Text buttonAbout;
     public Slider soundSlider;
-    public string language = "En";
-    public string Langkey = "lang";
+    public static string language = "En";
+    public static string Langkey = "lang";
     public static string SOUNDKEY = "sound";
-    public string soundOn = "On";
+    public static string soundOn = "On";
     //ChangeLanguage changeLanguage;
 
+  
     // Use this for initialization
     void Start () {
        

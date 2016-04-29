@@ -24,7 +24,6 @@ public class Score : MonoBehaviour {
         else if (SceneManager.GetActiveScene().name.Equals("HighScore"))
         {
 
-            
             showHighscore();
         }
     }
@@ -51,6 +50,8 @@ public class Score : MonoBehaviour {
 
     void showHighscore()
     {
+        if (!PlayerPrefs.HasKey(highscoreKey))
+            PlayerPrefs.SetInt(highscoreKey, SCORE);
         print(PlayerPrefs.GetInt(highscoreKey));
         HighScore.text = ""+PlayerPrefs.GetInt(highscoreKey);
     }
