@@ -7,7 +7,7 @@ public class PauseScript : MonoBehaviour {
     public GameObject menu;
     public Button stopButton;
     public float timer = 0.0F;
-    public bool pausable = false;
+    public static bool pausable = false;
     private float fillbutton;
     // Use this for initialization
     void Start () {
