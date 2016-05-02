@@ -4,7 +4,7 @@ using System.Collections;
 
 public class House : MonoBehaviour {
 
-	private int health = 10000;
+	private int health = 10;
     public Slider healthSlider;
     public float sliderValue;
     public int initalHealth = 0;
