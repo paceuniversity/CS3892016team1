@@ -2,26 +2,33 @@
 using System.Collections;
 
 public class EnemyMovement : MonoBehaviour {
+    public static float prevSpeed = 2;
+    private float speed;
 
-    private float speed = 2;
     private Vector2 targetPos = new Vector2(0, 0);
     private Vector3 rotatePos = new Vector3(0, 0, 0);
 
     // Use this for initialization
     void Start() {
-
+        speed = prevSpeed;
     }
         void addSpeed()
     {
-        speed += Time.deltaTime ;
+        if (PauseScript.speedup > 1.0f && prevSpeed <=11)
+        {
+            PauseScript.speedup = 0;
+            prevSpeed += 0.1f;
+        }
+        
     }
     // Update is called once per frame
     void Update()
     {
+        
         addSpeed();
-         
-     
-            if (Time.timeScale == 0.5F)
+        if (speed !=0)
+
+        if (Time.timeScale == 0.5F)
             {
                 // Move mosquito towards the House's point at 0,0
                 transform.position = Vector2.MoveTowards(new Vector2(transform.position.x, transform.position.y), targetPos, Time.fixedDeltaTime * speed / 2);

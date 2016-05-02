@@ -8,6 +8,7 @@ public class PauseScript : MonoBehaviour {
     public Button stopButton;
     public float timer = 0.0F;
     public float timer2 = 0.0F;
+    public static float speedup = 0;
     public static bool pausable = false;
     private float fillbutton;
     // Use this for initialization
@@ -20,7 +21,7 @@ public class PauseScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+        speedup += Time.deltaTime;
         fillbutton += Time.deltaTime / 7.0f;
         timer += Time.deltaTime;
         timer2 += Time.deltaTime;
