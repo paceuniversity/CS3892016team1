@@ -24,20 +24,23 @@ public class ChangeLanguage : MonoBehaviour {
 
     public void SetLang_Pt()
     {
-        
-        PlayerPrefs.SetString(Langkey, "Pt");
-        tempFont = Pt.font;
-        Pt.font = En.font;
-        En.font = tempFont;
+        if (!PlayerPrefs.GetString(Langkey).Equals("Pt"))
+        {
+            PlayerPrefs.SetString(Langkey, "Pt");
+            tempFont = Pt.font;
+            Pt.font = En.font;
+            En.font = tempFont;
+        }
     }
 
     public void SetLang_En()
     {
-        
-        PlayerPrefs.SetString(Langkey, "En");
-        tempFont = En.font;
-        En.font = Pt.font;
-        Pt.font = tempFont;
+        if (!PlayerPrefs.GetString(Langkey).Equals("En")) {
+            PlayerPrefs.SetString(Langkey, "En");
+            tempFont = En.font;
+            En.font = Pt.font;
+            Pt.font = tempFont;
+        }
     }
 
     // Use this for initialization

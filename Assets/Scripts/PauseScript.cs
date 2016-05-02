@@ -7,6 +7,7 @@ public class PauseScript : MonoBehaviour {
     public GameObject menu;
     public Button stopButton;
     public float timer = 0.0F;
+    public float timer2 = 0.0F;
     public static bool pausable = false;
     private float fillbutton;
     // Use this for initialization
@@ -20,11 +21,12 @@ public class PauseScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        fillbutton += Time.deltaTime / 2.5f;
+        fillbutton += Time.deltaTime / 7.0f;
         timer += Time.deltaTime;
+        timer2 += Time.deltaTime;
         stopButton.image.fillAmount = fillbutton;
 
-        if (timer > 1.5F && pausable == true)
+        if (timer2 > 1.5F && pausable == true)
         {
             pausable = false;
             Time.timeScale = 1;
@@ -32,10 +34,11 @@ public class PauseScript : MonoBehaviour {
             
 
         }
-        if (timer > 2.5F)
+        if (timer > 5.5F)
         {
             pausable = true;
-            timer = 0;
+            
+            timer2 = 0;
             
         }
     }
@@ -62,10 +65,11 @@ public class PauseScript : MonoBehaviour {
     {
         
 
-        if (Time.timeScale == 1 && pausable == true) { 
+        if (Time.timeScale == 1 && timer > 5.5F) { 
             Time.timeScale = 0.5F;
             fillbutton = 0;
-            
+            timer = 0;
+
         }
 
 

@@ -15,7 +15,7 @@ public class DestroyBoost : MonoBehaviour {
 
 	public void screenClear () {
 
-		if (Time.timeScale > 0 && PauseScript.pausable == true) {
+		if (Time.timeScale > 0) {
 			GameObject[] gameObjects = GameObject.FindGameObjectsWithTag ("Enemy");
 			foreach (GameObject target in gameObjects) {
 				GameObject.Destroy (target);

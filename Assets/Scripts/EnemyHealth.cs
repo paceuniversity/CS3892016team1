@@ -7,6 +7,7 @@ public class EnemyHealth : MonoBehaviour {
 	private int health = 1;
 	private int damage = 1;
     GameObject currentMosquito;
+    public AudioSource destroy;
 
 	void takeDamage(int damageVal)
 	{
@@ -44,6 +45,8 @@ public class EnemyHealth : MonoBehaviour {
 
 				if (health <= 0) {
                     // Destroys the gameObject the script is attached to, in this case the mosquito
+                    AudioSource.PlayClipAtPoint(destroy.clip, Camera.main.transform.position);
+
                     Score.SCORE++;
 					Destroy (currentMosquito);
 				}

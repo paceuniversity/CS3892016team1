@@ -11,12 +11,15 @@ public class EnemyMovement : MonoBehaviour {
     void Start() {
 
     }
-
+        void addSpeed()
+    {
+        speed += Time.deltaTime ;
+    }
     // Update is called once per frame
     void Update()
     {
-
-     
+        addSpeed();
+         
      
             if (Time.timeScale == 0.5F)
             {
