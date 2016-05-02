@@ -7,7 +7,10 @@ public class EnemyMovement : MonoBehaviour {
 
     private Vector2 targetPos = new Vector2(0, 0);
     private Vector3 rotatePos = new Vector3(0, 0, 0);
-
+    void Awake()
+    {
+         
+    }
     // Use this for initialization
     void Start() {
         speed = prevSpeed;
@@ -27,6 +30,7 @@ public class EnemyMovement : MonoBehaviour {
         
         addSpeed();
         if (speed !=0)
+        Debug.Log("speed" + speed + " speedup :"+ PauseScript.speedup);
 
         if (Time.timeScale == 0.5F)
             {

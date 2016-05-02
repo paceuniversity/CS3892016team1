@@ -13,6 +13,7 @@ public class PauseScript : MonoBehaviour {
     private float fillbutton;
     // Use this for initialization
     void Start () {
+        EnemyMovement.prevSpeed = 2;
         paused = false;
         Time.timeScale = 1;
         menu.SetActive(paused);
