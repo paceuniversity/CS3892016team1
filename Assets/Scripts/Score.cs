@@ -8,10 +8,23 @@ public class Score : MonoBehaviour {
     string highscoreKey = "highscore";
     public Text currentScore;
     public Text HighScore;
+    public Text score;
+    public Text HighScoretxt;
+    public string Langkey = "lang";
     // Use this for initialization
 
-    
+
     void Start () {
+        if (PlayerPrefs.GetString(Langkey).Equals("En"))
+        {
+            score.text = "score";
+            HighScoretxt.text = "HighScore";
+        }
+        if (PlayerPrefs.GetString(Langkey).Equals("Pt"))
+        {
+            score.text = "pontos";
+            HighScoretxt.text = "Recorde";
+        }
         if (SceneManager.GetActiveScene().name.Equals("Gameplay"))
         {
             SCORE = 0;

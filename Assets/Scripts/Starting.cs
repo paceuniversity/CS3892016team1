@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Starting : MonoBehaviour {
     public string Langkey = "lang";
     public string SoundKey = "sound";
+    public Text play;
     // Use this for initialization
     void Start () {
         if (!PlayerPrefs.HasKey(Langkey))
@@ -15,6 +17,15 @@ public class Starting : MonoBehaviour {
             PlayerPrefs.SetString(SoundKey, "On");
         }
         audioOnOff();
+        if (PlayerPrefs.GetString(Langkey).Equals("En"))
+        {
+            play.text = "Play";
+        }
+        if (PlayerPrefs.GetString(Langkey).Equals("Pt"))
+        {
+            play.text = "Jogar";
+        }
+
     }
     void audioOnOff()
     {

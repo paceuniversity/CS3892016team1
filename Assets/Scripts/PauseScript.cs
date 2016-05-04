@@ -11,8 +11,21 @@ public class PauseScript : MonoBehaviour {
     public static float speedup = 0;
     public static bool pausable = false;
     private float fillbutton;
+    public string Langkey = "lang";
+    public Text pausetxt;
+    public Text health;
     // Use this for initialization
     void Start () {
+        if (PlayerPrefs.GetString(Langkey).Equals("En"))
+        {
+            pausetxt.text = "paused";
+            health.text = "health";
+        }
+        if (PlayerPrefs.GetString(Langkey).Equals("Pt"))
+        {
+            pausetxt.text = "pausado";
+            health.text = "vida";
+        }
         EnemyMovement.prevSpeed = 2;
         paused = false;
         Time.timeScale = 1;
