@@ -15,16 +15,7 @@ public class Score : MonoBehaviour {
 
 
     void Start () {
-        if (PlayerPrefs.GetString(Langkey).Equals("En"))
-        {
-            score.text = "score";
-            HighScoretxt.text = "HighScore";
-        }
-        if (PlayerPrefs.GetString(Langkey).Equals("Pt"))
-        {
-            score.text = "pontos";
-            HighScoretxt.text = "Recorde";
-        }
+        
         if (SceneManager.GetActiveScene().name.Equals("Gameplay"))
         {
             SCORE = 0;
@@ -34,10 +25,16 @@ public class Score : MonoBehaviour {
             SetHighscore();
             showHighscore();
         }
-        else if (SceneManager.GetActiveScene().name.Equals("HighScore"))
-        {
 
-            showHighscore();
+        if (PlayerPrefs.GetString(Langkey).Equals("En"))
+        {
+            score.text = "score";
+            HighScoretxt.text = "HighScore";
+        }
+        if (PlayerPrefs.GetString(Langkey).Equals("Pt"))
+        {
+            score.text = "pontos";
+            HighScoretxt.text = "Recorde";
         }
     }
 
